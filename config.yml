@@ -142,6 +142,8 @@ params:
   # For help, see the wiki:
   # https://github.com/cstate/cstate/wiki/Customization
   categories:
+    - name: EU1
+    - name: EU2
     - name: Uncategorized
       untitled: true
 
@@ -155,13 +157,22 @@ params:
   systems:
     - name: Data Ingestion
       description: Data ingestion using OTLP, Prometheus, Vector, etc.
-      category: Uncategorized
+      category: EU1
     - name: Data Processing
       description: Spans, logs, and metrics processing
-      category: Uncategorized
+      category: EU1
     - name: Alerting and Notifications
       description: Metrics monitoring and notifications via email, Slack, Telegram, etc.
-      category: Uncategorized
+      category: EU1
+    - name: Data Ingestion
+      description: Data ingestion using OTLP, Prometheus, Vector, etc.
+      category: EU2
+    - name: Data Processing
+      description: Spans, logs, and metrics processing
+      category: EU2
+    - name: Alerting and Notifications
+      description: Metrics monitoring and notifications via email, Slack, Telegram, etc.
+      category: EU2
 
   # What date format to use?
   #
