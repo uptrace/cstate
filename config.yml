@@ -43,7 +43,7 @@
 
 # What is your status page called?
 # Shows up in the browser bar and meta tags
-title: Eggsample Status
+title: Uptrace Status
 
 # Should posts, which have a publish date
 # from the future, be built? Useful for
@@ -89,7 +89,7 @@ defaultContentLanguage: en
 # version 3. If you are just testing,
 # localhost should automatically work.
 #
-# Example: 
+# Example:
 # baseUrl: https://status.example.com/
 #
 # For testing:
@@ -97,7 +97,7 @@ defaultContentLanguage: en
 #
 # Broken example:
 # baseUrl: /
-baseURL: https://example.com
+baseURL: https://status.uptrace.dev
 
 # For features like Last modified, you
 # need to use a Git repository. If you
@@ -110,7 +110,6 @@ baseURL: https://example.com
 # We recommend to keep this at `true`.
 # BOOLEAN; `true`, `false`
 enableGitInfo: true
-
 
 ############################################################
 # +------------------------------------------------------+ #
@@ -139,14 +138,10 @@ params:
   #   Or it can be used alongside other categories.
   #
   # These are case sensitive.
-  # 
+  #
   # For help, see the wiki:
   # https://github.com/cstate/cstate/wiki/Customization
   categories:
-    - name: North Coast
-      description: The main servers are located here.
-      closed: true
-    - name: Empty Category
     - name: Uncategorized
       untitled: true
 
@@ -158,19 +153,14 @@ params:
   # For help, see the wiki:
   # https://github.com/cstate/cstate/wiki/Customization
   systems:
-    - name: Gateway
-      category: North Coast
-    - name: Backup Gateway
-      category: North Coast
-    - name: Website
-      description: The web frontend for the application.
+    - name: Data Ingestion
+      description: Data ingestion using OTLP, Prometheus, Vector, etc.
       category: Uncategorized
-      link: https://example.com/
-    - name: API
-      description: The guts of the application.
+    - name: Data Processing
+      description: Spans, logs, and metrics processing
       category: Uncategorized
-    - name: Media Proxy
-      description: This is the service responsible for serving images, audio, and video. It is reliant on our CDN.
+    - name: Alerting and Notifications
+      description: Metrics monitoring and notifications via email, Slack, Telegram, etc.
       category: Uncategorized
 
   # What date format to use?
@@ -188,7 +178,7 @@ params:
   # Should relative time (x min ago) be used?
   #
   # IMPORTANT: In the frontmatter, the dates MUST be in
-  # the UTC time zone for this to work preperly. If you 
+  # the UTC time zone for this to work preperly. If you
   # use Netlify CMS, all good — the CMS picks UTC time
   # by default. Otherwise, there may be very inaccurate
   # times if multiple time zones are in your issue files.
@@ -198,8 +188,8 @@ params:
   # wish to use relative time but old issues do not have
   # UTC time (and therefore are out of sync by ±24 hours)
   #
-  # Read the wiki for more: 
-  # https://github.com/cstate/cstate/wiki/Customization#time 
+  # Read the wiki for more:
+  # https://github.com/cstate/cstate/wiki/Customization#time
   #
   # If enabled, will display relative times in places like
   # the incident history and summaries instead of using
@@ -209,7 +199,7 @@ params:
   # Default: `true`
   # BOOLEAN; `true`, `false`
   useRelativeTime: true
- 
+
   # If enabled, doesn't show seconds on relative times.
   #
   # With option ON (true):
@@ -286,7 +276,7 @@ params:
   #
   # Recommended: png, bmp, jpg, or gif
   # for best browser support!
-  logo: logo.png
+  logo: logo-small.svg
 
   # This is the description that is shown
   # on the footer and meta tags.
