@@ -1,8 +1,8 @@
 ---
 title: Data processing delay
 date: 2025-06-28 05:00:00
-resolved: false
-resolvedWhen: 2024-12-04 14:00:00
+resolved: true
+resolvedWhen: 2025-06-28 08:00:00
 severity: disrupted
 affected:
   - EU1
@@ -10,6 +10,9 @@ affected:
   - Alerting and Notifications
 section: issue
 ---
+
+_Resolved_ -
+We believe all data should be successfully processed and available for querying. {{< track "2025-06-28 08:00:00" >}}
 
 _Monitoring_ - We believe the we've resolved the root cause and the new data should be processed as normally. The queued data is still being processed. {{< track "2025-06-28 07:30:00" >}}
 
